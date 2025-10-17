@@ -1,7 +1,11 @@
 package calculator;
 
+import calculator.service.NumberParser;
+
 public class Application {
     public static void main(String[] args) {
         // TODO: 프로그램 구현
+        NumberParser numberParser = new NumberParser();
+        numberParser.parse("//s\n1s2;3");
     }
 }
