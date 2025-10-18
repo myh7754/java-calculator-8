@@ -6,5 +6,5 @@ import java.util.Collection;
 
 public interface CalculatorService {
     String inputMessage();
-    Number calculateSum(Collection<?> numbers);
+    Number calculateSum(CalculatorNumber calculatorNumber);
 }

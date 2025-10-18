@@ -14,7 +14,7 @@ public class CalculatorNumber {
         numbers.add(number);
     }
 
-    public Collection<?> getNumbers() {
+    public Collection<Double> getNumbers() {
         return numbers;
     }
 }
