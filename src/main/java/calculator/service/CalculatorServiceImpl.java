@@ -23,7 +23,11 @@ public class CalculatorServiceImpl implements CalculatorService {
         double sum = numbers.getNumbers().stream()
                 .mapToDouble(Number::doubleValue)
                 .sum();
-        return (sum % 1 == 0) ? (long) sum : sum;
+        if (sum % 1 == 0) {
+            return Long.valueOf((long) sum);
+        } else {
+            return Double.valueOf(sum);
+        }
     }
 
     public NumberParser getNumberParser() {

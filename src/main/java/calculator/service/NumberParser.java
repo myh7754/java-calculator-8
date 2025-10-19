@@ -12,7 +12,7 @@ import java.util.regex.Pattern;
 public class NumberParser {
 
     private static final String DEFAULT_DELIMITER = ",|:"; // 기본 정규식
-    private static final Pattern CUSTOM_DELIMITER = Pattern.compile("//(.)\\n(.*)"); // 커스텀 정규식
+    private static final Pattern CUSTOM_DELIMITER = Pattern.compile("//(.)\\\\n(.*)"); // 커스텀 정규식
     private static final Pattern VALID_NUMBER_PATTERN = Pattern.compile("^[0-9]+$");// 숫자만 (시작~끝까지)
 
     public Collection<Double> parse(String message) {
@@ -27,6 +27,7 @@ public class NumberParser {
             if (!matcher.matches()) {
                 throw new IllegalArgumentException("잘못된 구분자 형식입니다: "+ message);
             }
+
             delimiter = matcher.group(1); // 커스텀 구분 문자
             numbers = matcher.group(2);
 

@@ -24,7 +24,6 @@ public class CalculatorController {
     public void run() {
         calculatorView.display();
         String input = calculatorService.inputMessage();
-
         Collection<Double> parse = numberParser.parse(input);
         for (Double o : parse) {
             calculatorNumber.addNumber(o);
