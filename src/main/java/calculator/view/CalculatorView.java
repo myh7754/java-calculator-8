@@ -8,12 +8,9 @@ public class CalculatorView {
         System.out.println(introMessage);
     }
 
-    public void printMessage(Long result) {
+    public void printMessage(Number result) {
         System.out.println(resultMessage + result);
     }
 
-    public void printMessage(Double result) {
-        System.out.println(resultMessage + result);
-    }
 
 }
